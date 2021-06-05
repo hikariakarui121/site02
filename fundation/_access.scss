@@ -1,0 +1,54 @@
+#access{
+  background: url("./image/bg.png");
+  text-align: center;
+  padding-top: 60px;
+  padding-bottom: 110px;
+ 
+
+    .title{
+      padding-bottom:85px;
+      .logo{
+  
+        img{
+          padding-bottom: 20px;
+        }
+      }
+  
+      h2{
+        font-size:36px;
+      }
+    }
+
+
+    .a-contents{
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      padding-bottom: 70px;
+
+      .a-image{
+        
+        img{
+          width: 656px;
+          height: 370px;
+          padding-right:83px;
+        }
+      }
+
+      .a-text{
+        font-size:16px;
+        text-align: left;
+
+
+        h4{
+          font-weight: bold;
+          padding-bottom:16px;
+        }
+        p{
+          padding-bottom:16px;
+          line-height: 32px;
+        }
+      }
+
+    }
+}

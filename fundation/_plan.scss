@@ -1,0 +1,62 @@
+#plan{
+  text-align: center;
+  background: url("./image/bg02.png");
+  padding-bottom: 138px;
+  padding-top: 60px;
+
+  .title{
+    padding-bottom:65px;
+
+    .logo{
+
+      img{
+        padding-bottom: 20px;
+      }
+    }
+
+    h2{
+      font-size:36px;
+    }
+
+  }
+
+  .p-inner{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+   
+
+    .p-contents{
+      display: flex;
+      flex-direction: column-reverse;
+      width: 331px;
+      
+      &+.p-contents{
+        padding-left:95px;
+      }
+
+      .p-item{
+        padding-top: 26px;
+       text-align: left;
+
+        h3{
+          font-size: 20px;
+          line-height: 32px;
+          padding-bottom: 24px;
+        }
+        .discription{
+          font-size: 16px;
+          line-height: 32px;
+        }
+
+      }
+
+      img{
+        width: 331px;
+        height: 209px;
+      }
+
+  }
+    }
+
+}
