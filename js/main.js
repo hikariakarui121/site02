@@ -55,33 +55,12 @@ $(function(){
   })
 });
 
-
-// $(function(){
-//   const hH = $(window).innerHeight();
-
-//   const onScroll = function(){
-//     if( hH > 0 ) {
-//       $('#h-nav').addClass('sub');
-//       $('#h-nav a').addClass('sub');
-//       $('#h-nav img').attr('src', './image/sub-header-logo.png')
-//     } else {
-//       $('#h-nav').removeClass('sub');
-//       $('#h-nav a').removeClass('sub');
-//       $('#h-nav img').attr('src', './image/top-header-logo.png')
-//     } 
-//   };
-  
-//   $(window).on("scroll", () => {
-//     onScroll();
-//   });
-
-// });
-
 // $(function(){
 //   const scrollY = $(window).pageYOffset;
 //   console.log(scrollY);
 
 // });
+
 
 document.addEventListener('scroll',function(){
   const scrollY = window.pageYOffset;
@@ -102,4 +81,13 @@ AOS.init({
   duration: 700,
 
 })
+
+
+// ナビボタン
+$(function(){
+  $('.nav-btn').on('click',function(){
+      $(this).toggleClass("-active");
+      // $('#nav').toggleClass("-active");
+  })
+});
 

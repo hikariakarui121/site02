@@ -1,0 +1,217 @@
+#r-main{
+  text-align: center;
+  padding-top: 80px;
+
+  // トップの写真
+  .room-top{
+    position: relative;
+    padding-bottom:36px;
+
+    h1{
+      font-size:34px;
+      position: absolute;
+      top:50%;
+      left:50%;
+      transform: translate(-50%,-50%);
+      color:#FFFFFF;
+    }
+
+    .room-img{
+
+      img{
+        width: 100%;
+      }
+    }
+  }
+}
+
+
+// メイン部分
+main{
+
+.r-inner{
+  max-width: 1180px;
+  margin: 0 auto;
+  z-index: 0;
+
+
+  #s-top{
+    // パンクズリスト 
+    .pan-list{
+      padding-bottom:98px;
+  
+      ul{
+        display: flex;
+  
+        li{
+          font-size:16px;
+        
+  
+          & +li::before{
+            content: ' \03e ';
+            padding-right:10px;
+            padding-left: 10px;
+          }
+  
+          a{
+           color:#000000;
+            display: block;
+          }
+          
+        }
+      }
+    }
+
+    // タイトル部分
+    .r-text{
+      text-align: center;
+      font-size: 16px;
+      line-height: 32px;
+      padding-bottom:78px;
+      }
+
+
+
+  } //section top
+
+.s-main{
+  text-align: center;
+
+  .r-contents{
+
+    @include OverTab{
+      display: flex;
+      position: relative;
+      margin-bottom: 280px;
+
+      &:nth-child(even){
+        flex-direction: row-reverse;
+      }
+    }
+   
+    
+
+    .r-item{
+      background:url("./image/bg.png");
+
+      @include OverTab{
+        position: absolute;
+        top:57px;
+        right: 0;
+        padding-left: 244px;
+        padding-right:68px;
+        z-index:-10;
+        text-align: left;
+        box-sizing: border-box;
+
+        &.odd{
+          left: 0;
+          right: auto;
+          padding-right: 244px;
+          padding-left:68px;
+        }
+  
+      }
+      
+
+      
+      h3{
+        font-size:24px;
+        padding-top: 60px;
+        padding-bottom: 52px;
+      }
+      
+      p{
+        font-size:16px;
+        line-height: 32px;
+
+        &.hot-p{
+          padding-top:52px;
+          padding-bottom: 112px;
+
+        }
+
+        &+p{
+          padding-top:52px;
+          padding-bottom: 112px;
+          font-size: 14px;
+          
+        }
+      }
+
+    } // r-item
+    
+  
+    .r-image{
+      z-index:0;
+      // flex: 1;
+      img{
+        width: 80%;
+
+
+        @include OverTab{
+            width:400px;
+            height:230px;
+          }
+
+      @include sOverTab{
+        width: 525px;
+        height: 300px;
+      }  
+    }
+  }
+
+  }// r-contents
+    
+}// s-top
+
+//  効能説明
+#h-detail{
+  text-align: center;
+  padding-top:100px;
+  padding-bottom:100px;
+  margin-bottom:100px;
+  border-top:1px solid #E7E7E7 ;
+  border-bottom: 1px solid #E7E7E7;
+
+    h4{
+      font-size: 26px;
+      padding-bottom:50px;
+     
+    }
+  
+    dl{
+      font-size:15px;
+      line-height: 32px;
+      max-width: 880px;
+      margin: 0 auto;
+    
+     .hot-item{
+       display: flex;
+       justify-content: flex-start;
+       border-top:1px solid #E7E7E7;
+       border-bottom: 1px solid #E7E7E7 ;
+ 
+       dt{
+         width: 220px;
+         text-align: left;
+         box-sizing: border-box;
+         padding-left: 10px;
+  
+       }
+       dd{
+        text-align: left;
+        flex:1;
+       }
+     }
+    }
+} //h-detail
+
+
+} //inner
+} // main
+  
+
+
+
+

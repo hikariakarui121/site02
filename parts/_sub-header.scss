@@ -1,3 +1,5 @@
+@import "../fundation/general";
+
 header{
 
   #h-nav-sub{
@@ -5,13 +7,17 @@ header{
     box-sizing: border-box;
     height: 80px;
     display: flex;
-    justify-content: flex-start;
+    justify-content: space-between;
     background-color: #FFFFFF;
     align-items: center;
     padding-left: 20px;
     padding-right: 20px;
     position:fixed;
     z-index: 100;
+
+    @include midTab{
+      justify-content: flex-start;
+    }
 
     &.open{
       transform: translateY(-100%);
@@ -28,14 +34,24 @@ header{
       img{
         margin-right:120px;
         line-height: 80px;
+        width: 150px;
+
+        @include midTab{
+          width: 201px;
+          line-height: 80px;
+        }
       }
     }
 
     
     nav{
 
-      ul{
-        display: flex;
+        ul{
+          display: none;
+
+          @include midTab{
+            display: flex;
+            
 
         li{
 
@@ -53,31 +69,39 @@ header{
              color:#000000;
             }
 
-
-
-
           }
         }
       }
     }
+    }
 
     .btn{
       position: absolute;
-      right:20px;
-      
+      right:80px;
 
+      @include midTab{
+        right:20px;
+      }
 
       a{
         display: block;
         font-size: 16px;
-        line-height: 3em;
         color:white;
         text-decoration: none;
         background-color: #978F10;
-        height:46px;
-        width:170px;
+        height:32px;
+        width:100px;
+        line-height: 32px;
         text-align: center;
+
+        @include smallTab{
+          height:46px;
+          width:170px;
+          line-height: 3em;
+        }
       }
+
+      
     }
 }
 }
