@@ -39,9 +39,18 @@
           a{
             display: block;
             color:#000000 ;
-            
-            &.time{
+
+            &:not(.active):hover{
+              opacity:0.5;
+              transform: opacity 0.4s;
+          }
+
+            &.active{
               text-decoration:underline;
+              // background-color: black;
+
+              
+
             }
   
           }
@@ -49,18 +58,26 @@
         }
       }
     }
-  
-  
+
     .i-contents{
+      display: none;
+    }
+  
+  
+    .i-contents.active{
       display: grid;
       justify-content: center;
       align-items: center;
-      grid-template-columns: 570px 570px;
       grid-template-rows:auto;
       gap:20px 45px;
-      
+      grid-template-columns: minmax(min-content,570px);
 
-     
+      @include midTab{
+        grid-template-columns: minmax(min-content,570px)  minmax(min-content,570px);
+      }
+      // background-color: black;
+
+         
       .i-item{
         display: flex;
         flex-direction: row-reverse;

@@ -6,32 +6,88 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="./css/reset.css">
   <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
   <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> 
 
-  
   <title>石井花壇 | 温海温泉旅館【公式サイト】</title> 
   <meta name="discription" content="ディスクリプション＝日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。 伝統的「和」の息づく空間で、至極のひとときをお過ごしください。タイトル ＝ 石井花壇 | 温海温泉旅館【公式サイト】 ディスクリプション＝日本古来の素材と現代的表現を併せ持つ温泉旅館、石井花壇。 伝統的「和」の息づく空間で、至極のひとときをお過ごしください。"> 
   
 </head>
 <body>
-  <header>
 
+  <section id="modal" class="hidden">
+
+    <div class="modal-title">
+      <h3> 宿泊予約</h3>
+      <hr>
+    </div>
+    <div class="btn">
+      <div class="close"><span></span><span></span></div>
+    </div>
+    <form action="#">
+      <div class="register">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" placeholder="例：石井正悟">
+      </div>
+    
+      <div class="register">
+        <label for="email">メールアドレス</label>
+        <input type="text" id="email" name="email" placeholder="例：Example@example.com" >
+      </div>
+  
+      <div class="register">
+        <label for="plan">ご希望プラン</label>
+        <input type="text"  list="plan" placeholder="プランを選択してください">
+            <datalist id="plan">
+              <option value="①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン ">
+              <option value="②平日に優雅に楽しむ、特別宿泊プラン">
+              <option value="③絶景貸切露天と個室会席を満喫できるファミリープラン">
+            </datalist>
+      </div>
+      <div class="register">
+        <label for="name">日時選択</label>
+        <input type="text" id="flatpickr"placeholder="日付を選択してください" >
+      </div>
+  
+      <button type="submit" id="js-submit" disabled>送信</button>
+    </form>
+  </section>
+  <div id="mask" class="hidden"></div>
+
+  <header>
   <section>
     <div id="h-nav">
       <h1><img src="./image/top-header-logo.png" alt=""></h1>
     
       <nav>
         <ul>
-          <li><a href="">お部屋</a></li>
-          <li><a href="">お料理</a></li>
-          <li><a href="">温泉</a></li>
+          <li><a href="room.html">お部屋</a></li>
+          <li><a href="food.html">お料理</a></li>
+          <li><a href="hotspring.html">温泉</a></li>
         </ul>
       </nav>
     
-      <div class="btn"><a href="">宿泊予約</a></div>
+      <div class="btn"><a href="javascript:void(0)" class="modal-btn">宿泊予約</a></div>
     </div>
   </section>
 
+  <section id="h-nav-sub" class="open">
+    <h1><a href="index.html"><img src="./image/sub-header-logo.png" alt=""></a></h1>
+  
+    <nav>
+      <ul>
+        <li><a  class="sub" href="#">お部屋</a></li>
+        <li><a class="sub" href="food.html">お料理</a></li>
+        <li><a class="sub" href="hotspring.html">温泉</a></li>
+      </ul>
+    </nav>
+  
+    <div class="btn"><a href="javascript:void(0)" class="modal-btn">宿泊予約</a></div>
+  </section>
+
+   
   <section id="top">
 
     <div class="swiper-container">
@@ -47,21 +103,19 @@
     </h2>
 
   </section>
-
-
   </header>
     
     <main>
-    <section id="contents">
+    <section id="contents" >
 
       <div class="inner">
 
 
-        <h2>温 海 温 泉 の <br>
+        <h2 data-aos="zoom-in-up">温 海 温 泉 の <br>
           美 し さ に 癒 や さ れ て
         </h2>
   
-      <div class="contents-item">
+      <div class="contents-item"  data-aos="zoom-in-up">
         <p>
           東 北 の 奥 座 敷 で あ る 温 海 温 泉 郷<br>
           開 湯 は 約 1 3 0 0 年 前 と さ れ 、 役 小 角 が<br>
@@ -79,7 +133,7 @@
           頑 張 ら な い 圧 倒 的 な 非 日 常 を ご 提 供 し ま す
         </p>
     
-        <p class="author">石 井 花 壇</p>
+        <p class="author" data-aos="zoom-in-up">石 井 花 壇</p>
   
   
       </div>
@@ -91,29 +145,29 @@
 
     <section id="feature">
 
-      <div class="feature-item">
+      <div class="feature-item" data-aos="zoom-in-up">
         <div class="text">
           <h2>喧騒から離れた空間<br>心落ち着く至極のひととき</h2>
           <p>まるで時が止まったかのような、圧倒的な静寂のなかで、<br>ひたすらにゆったりと…。<br>最高級の「何もしない時間」をお過ごしください。</p>
-          <div class="detail-btn"><a href="">お部屋について</a></div>
+          <div class="detail-btn"><a href="room.html">お部屋について</a></div>
         </div>
         <div class="image"><img src="./image/oheya-top.jpg" alt=""></div>
       </div>
 
-      <div class="feature-item">
+      <div class="feature-item" data-aos="zoom-in-up">
         <div class="text second">
           <h2>出迎えるのは<br>極上の温海料理</h2>
           <p>最も旬の食材を愉しむ、最高の贅沢を<br>最高級A5ランクの米沢牛と共に頂く。<br>あなたの人生史に残る「極上の感動」を<br>お約束します。</p>
-          <div class="detail-btn"><a href="">料理について</a></div>
+          <div class="detail-btn"><a href="food.html">料理について</a></div>
         </div>
         <div class="image second"><img src="./image/menu-top.jpg" alt=""></div>
       </div>
 
-      <div class="feature-item">
+      <div class="feature-item" data-aos="zoom-in-up">
         <div class="text">
           <h2>疲れ切った身体にやすらぎを<br>温海の源泉に癒やされて</h2>
           <p>古くは弘法大師の病をも治療したと言われる熱海の泉質。<br>現代人の疲弊しきった身体を修復する最高級の湯治場として<br>ご活用ください。</p>
-          <div class="detail-btn"><a href="">温泉について</a></div>
+          <div class="detail-btn"><a href="hotspring.html">温泉について</a></div>
 
         </div>
         <div class="image"><img src="./image/onsen-top.jpg"></div>
@@ -122,15 +176,15 @@
     </section>
 
 
-   <section id="plan">
+   <section id="plan" >
 
-     <div class="title">
-       <div class="logo"><img src="./image/logo02.png" alt=""></div>
+     <div class="title" data-aos="zoom-in-up">
+       <div class="logo" data-aos="zoom-in-up"><img src="./image/logo02.png" alt=""></div>
        <h2>おすすめのご宿泊プラン</h2>
      </div>
 
     
-      <div class="p-inner">
+      <div class="p-inner" data-aos="zoom-in-up">
 
         <div class="p-contents">
           <div class="p-item">
@@ -163,22 +217,20 @@
   <!-- インフォメーション -->
    <section id="info">
 
-
-
-      <div class="title">
+      <div class="title" data-aos="zoom-in-up">
         <div class="logo"><img src="./image/logo02.png" alt=""></div>
         <h2>お知らせ</h2>
       </div>
   
-      <nav>
+      <nav  data-aos="zoom-in-up">
         <ul>
-          <li><a href="" class="time">営業時間</a></li>
-          <li><a href="" >その他</a></li>
+          <li><a href="javascript:void(0)" class="tab active" data-id="time">営業時間</a></li>
+          <li><a href="javascript:void(0)" class="tab" data-id="etc">その他</a></li>
         </ul>
       </nav>
   
-      <div class="i-contents">
-        
+      <!-- 営業時間 -->
+      <div class="i-contents active" id="time" data-aos="zoom-in-up">
         <div class="i-item">
           <div class="i-text">
             <div class="i-date">2020.12.24</div>
@@ -238,21 +290,83 @@
             <img src="./image/news02.png" alt="">
           </div>
         </div>
-  
-
     </div>
+
+    <!-- その他 -->
+    <div class="i-contents" id="etc">
+      <div class="i-item">
+        <div class="i-text">
+          <div class="i-date">2020.03.03</div>
+          <div class="i-discription">おやすみ</div>
+        </div>
+        <div class="i-image">
+          <img src="./image/news01.png" alt="">
+        </div>
+      </div>
+
+      <div class= "i-item">
+        <div class="i-text">
+          <div class="i-date">2020.03.03</div>
+          <div class="i-discription">おやすみ</div>
+        </div>
+        <div class="i-image">
+          <img src="./image/news02.png" alt="">
+        </div>
+      </div>
+
+      <div class= "i-item">
+        <div class="i-text">
+          <div class="i-date">2020.03.03</div>
+          <div class="i-discription">おやすみ</div>
+        </div>
+        <div class="i-image">
+          <img src="./image/news02.png" alt="">
+        </div>
+      </div>
+
+      <div class= "i-item">
+        <div class="i-text">
+          <div class="i-date">2020.03.03</div>
+          <div class="i-discription">おやすみ</div>
+        </div>
+        <div class="i-image">
+          <img src="./image/news01.png" alt="">
+        </div>
+      </div>
+      
+      <div class= "i-item">
+        <div class="i-text">
+          <div class="i-date">2020.03.03</div>
+          <div class="i-discription">おやすみ</div>
+        </div>
+        <div class="i-image">
+          <img src="./image/news01.png" alt="">
+        </div>
+      </div>
+
+      <div class= "i-item">
+        <div class="i-text">
+          <div class="i-date">2020.03.03</div>
+          <div class="i-discription">おやすみ</div>
+        </div>
+        <div class="i-image">
+          <img src="./image/news02.png" alt="">
+        </div>
+      </div>
+  </div>
+
    </section>
 
 
    <section id="access">
 
-    <div class="title">
+    <div class="title" data-aos="zoom-in-up">
       <div class="logo"><img src="./image/logo02.png" alt=""></div>
       <h2>アクセス</h2>
     </div>
 
 
-    <div class="a-contents">
+    <div class="a-contents" data-aos="zoom-in-up">
 
       <div class="a-image">
         <img src="./image/acess.jpg" alt="">
@@ -273,26 +387,32 @@
       
     </div>
     
-    <div class="map">
+    <div class="map" >
       <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24933.846757694806!2d139.58105087249993!3d38.63207256963377!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8c6dbd6c03ae15%3A0x10bc5da99bc816ef!2z44CSOTk5LTcyMDUg5bGx5b2i55yM6ba05bKh5biC5rip5rW3!5e0!3m2!1sja!2sjp!4v1622872173282!5m2!1sja!2sjp" width="792" height="592" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
     </div>
+    
+    <div class="sub-map" >
+      <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24933.846757696963!2d139.58105087601695!3d38.63207256962756!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x5f8c6dbd6c03ae15%3A0x10bc5da99bc816ef!2z44CSOTk5LTcyMDUg5bGx5b2i55yM6ba05bKh5biC5rip5rW3!5e0!3m2!1sja!2sjp!4v1623431015073!5m2!1sja!2sjp" width="400" height="300" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+    </div>
+
+
    </section>
   </main>
   <footer>
-    <section id="f-nav">
-      <nav>
+    <section id="f-nav" >
+      <nav  data-aos="zoom-in-up">
         <ul>
-          <li><a href="">お部屋</a></li>
-          <li><a href="">お料理</a></li>
-          <li><a href="">温泉</a></li>
+          <li><a href="room.html">お部屋</a></li>
+          <li><a href="food.html">お料理</a></li>
+          <li><a href="hotspring.html">温泉</a></li>
         </ul>
       </nav>
 
-      <div class="f-logo">
+      <div class="f-logo" data-aos="zoom-in-up">
         <img src="./image/footer-logo.png" alt="">
       </div>
 
-      <div class="f-info">
+      <div class="f-info" data-aos="zoom-in-up">
 
         <div class=f-address>
           <p>〒000-0000</p>
@@ -313,7 +433,10 @@
     </section>
 
   </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
   <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
   <script src="./js/main.js"></script>
 </body>
 </html>

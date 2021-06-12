@@ -1,7 +1,6 @@
 body{
   font-family: “Times New Roman”, “游明朝”, “Yu Mincho”, “游明朝体”, “YuMincho”, “ヒラギノ明朝 Pro W3”, “Hiragino Mincho Pro”, “HiraMinProN-W3”, “HGS明朝E”, “ＭＳ Ｐ明朝”, “MS PMincho”, serif;
-
-
+  position: relative;
 }
 
 
@@ -14,7 +13,21 @@ li{
   list-style: none;
 }
 
-// img{
-//   width: 100%;
-//   height: 100%;
-// }
+
+@mixin OverTab {
+  @media screen and(min-width:1000px){
+    @content; 
+  }
+}
+
+@mixin midTab {
+  @media screen and(min-width:800px){
+    @content; 
+  }
+}
+
+@mixin smallTab {
+  @media screen and(min-width:670px){
+    @content; 
+  }
+}

@@ -1,0 +1,208 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="./css/reset.css">
+  <link rel="stylesheet" href="./style.css">
+  <link href="https://unpkg.com/aos@2.3.1/dist/aos.css" rel="stylesheet">
+  <link rel="stylesheet" href="https://unpkg.com/swiper/swiper-bundle.min.css" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/flatpickr/dist/flatpickr.min.css">
+  <script src="https://cdn.jsdelivr.net/npm/flatpickr"></script> 
+  <title>お部屋 - 石井花壇 | 温海温泉旅館【公式サイト】</title> 
+
+  <script type=”application/ld+json”>
+
+    {
+    
+    “@context”:”http://schema.org”,
+    
+    “@type”: “BreadcrumbList”,
+    
+    “itemListElement”: [
+    
+    { “@type”: “ListItem”, “position”: 1, “item”: { “@id”:
+    “#”, “name”: “ホーム” }},
+    
+    { “@type”: “ListItem”, “position”: 2, “item”: { “@id”:
+    “#/room/”, “name”: “お部屋” }}
+    
+    ]
+    
+    }
+    
+    </script>
+</head>
+
+<body>
+  <section id="modal" class="hidden">
+
+    <div class="modal-title">
+      <h3> 宿泊予約</h3>
+      <hr>
+    </div>
+    <div class="btn">
+      <div class="close"><span></span><span></span></div>
+    </div>
+    <form action="#">
+      <div class="register">
+        <label for="name">お名前</label>
+        <input type="text" id="name" name="name" placeholder="例：石井正悟">
+      </div>
+    
+      <div class="register">
+        <label for="email">メールアドレス</label>
+        <input type="text" id="email" name="email" placeholder="例：Example@example.com" >
+      </div>
+  
+      <div class="register">
+        <label for="plan">ご希望プラン</label>
+        <input type="text"  list="plan" placeholder="プランを選択してください">
+            <datalist id="plan">
+              <option value="①【期間限定】海辺の四季旬彩、贅沢美味懐石プラン ">
+              <option value="②平日に優雅に楽しむ、特別宿泊プラン">
+              <option value="③絶景貸切露天と個室会席を満喫できるファミリープラン">
+            </datalist>
+      </div>
+      <div class="register">
+        <label for="name">日時選択</label>
+        <input type="text" id="flatpickr"placeholder="日付を選択してください" >
+      </div>
+  
+      <button type="submit" id="js-submit" disabled>送信</button>
+    </form>
+  </section>
+
+  <div id="mask" class="hidden"></div>
+  
+
+  <header>
+    <section id="h-nav-sub" class="sub">
+      <h1><img src="./image/sub-header-logo.png" alt=""></h1>
+    
+      <nav>
+        <ul>
+          <li><a  class="sub" href="room.html">お部屋</a></li>
+          <li><a class="sub" href="#">お料理</a></li>
+          <li><a class="sub" href="hotspring.html">温泉</a></li>
+        </ul>
+      </nav>
+    
+      <div class="btn"><a href="javascript:void(0)" class="modal-btn">宿泊予約</a></div>
+    </section>
+  </header>
+  
+  <!-- トップの写真 -->
+  <section id="r-main"> 
+      <div class="room-top">
+        <h1>お料理</h1>
+
+        <div class="room-img"><img src="./image/menu-header.png" alt="お料理ヘッダー写真"></div>
+      </div>
+
+
+    <!-- パンクズ -->
+  <main>
+  <div class="r-inner">
+    <section id="s-top">
+      <div class="pan-list">
+        <ul>
+          <li><a href=”#”>トップ</a></li>
+          <li>お料理</li>
+        </ul>
+      </div>
+  
+      <div class="r-text"data-aos="zoom-in-up">
+        地元熱海の市場で仕入れた食材のみを使った食材をふんだんに使い、<br>
+        大将の技が光る「熱海料理」<br>
+        四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。
+      </div>
+    </section>
+
+    <section class="s-main">
+
+      <div class="r-contents"data-aos="zoom-in-up">
+        <div class="r-image">
+          <img src="./image/menu01.png" alt="">
+        </div>
+        <div class="r-item">
+          <h3>地元食材にこだわった会席料理</h3>
+          <p class="hot-p">みずみずしくほのかに甘い野菜、新鮮で味に深みがある魚介類、肉類。<br>
+            旬の素材をそのままに生かす、経験に裏打ちされた確かな技。<br>四季ごと、日ごとに変化する味わいを、どうぞご堪能ください。</p>
+        </div>
+      </div>
+  
+      <div class="r-contents"data-aos="zoom-in-up">
+      
+        <div class="r-item odd" >
+          <h3>熱海の漁港で目利きの品を</h3>
+          <p class="hot-p">石井花壇でお出しする料理はすべて料理長である大将の目利きで、<br>
+            熱海の魚市場でその日のうちに仕入れたものを使用しております。<br>
+            日本海の宝玉を十分にお楽しみください。</p>
+        </div>
+        <div class="r-image">
+          <img src="./image/menu02.png" alt="">
+        </div>
+
+      </div>
+  
+      <div class="r-contents"data-aos="zoom-in-up">
+        <div class="r-image">
+          <img src="./image/menu03.png" alt="">
+        </div>
+        <div class="r-item">
+          <h3>食材が一流、職人も一流</h3>
+          <p class="hot-p">石井花壇の料理人は料亭で20年経験を積んだものばかり。<br>
+            その時の最も旬な食材を、最高の調理でお届けします。<br>
+            また、お料理への細かいご要望にもお答えできますので、<br>
+            お気軽にお申し付けください。</p>
+        </div>
+      </div> 
+    </section>
+
+  </div>
+  </main>
+  <footer>
+    <section id="f-nav">
+      <nav data-aos="zoom-in-up">
+        <ul>
+          <li><a href="room.html">お部屋</a></li>
+          <li><a href="food.html">お料理</a></li>
+          <li><a href="hotspring.html">温泉</a></li>
+        </ul>
+      </nav>
+
+      <div class="f-logo"data-aos="zoom-in-up">
+        <img src="./image/footer-logo.png" alt="">
+      </div>
+
+      <div class="f-info"data-aos="zoom-in-up">
+
+        <div class=f-address>
+          <p>〒000-0000</p>
+          <p>山形県鶴岡市xxxxxxxxxxx</p>
+        </div>
+
+        <div class="f-tell">
+          <p>TEL.000-0000-0000</p>
+          <p>FAX.00-0000-0000</p>
+        </div>
+
+      </div>
+
+      <section id="last">
+        <p>  Copyright © 石井花壇 All Rights Reserved.</p>
+      </section>
+
+    </section>
+
+  </footer>
+  <script src="https://code.jquery.com/jquery-3.6.0.min.js" integrity="sha256-/xUj+3OJU5yExlq6GSYGSHk7tPXikynS7ogEvDej/m4="
+  crossorigin="anonymous"></script>
+  <script src="https://unpkg.com/swiper/swiper-bundle.min.js"></script>
+  <script src="https://unpkg.com/aos@2.3.1/dist/aos.js"></script>
+  <script src="./js/main.js"></script>
+  
+</body>
+</html>
