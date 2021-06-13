@@ -1,3 +1,4 @@
+@import './general';
 #feature{
   padding-bottom:78px ;
 
@@ -30,15 +31,22 @@
 
       &.second{
         // これはフレックスぽっくすで対応
-       padding-left:20px;
-       box-sizing: border-box;
+       @include smallTab{
+        box-sizing: border-box;
+        padding-left:20px;
+       }
       
       }
 
       h2{
-        font-size: 36px;
+       
+        font-size:24px;
         line-height: 62px;
         padding-bottom: 75px;
+
+        @include smallTab{
+          font-size: 36px;
+        }
         
 
       }

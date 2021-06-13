@@ -1,3 +1,5 @@
+@import './general';
+
 #contents{
   background:url("./image/bg3.png");
   background-size: cover;
@@ -23,10 +25,11 @@
     }
 
     h2{
-      font-size: 28px;
+      
       line-height: 44px;
       text-align: center;
       padding-bottom: 30px;
+      font-size: 24px;
       
 
       @include smallTab{
@@ -35,6 +38,7 @@
         text-align: inherit;
         padding-left:45px;
         padding-bottom: 0px;
+        font-size: 28px;
       }
 
       @include OverTab{

@@ -7,7 +7,6 @@ header{
     box-sizing: border-box;
     height: 80px;
     display: flex;
-    
     background-color:transparent;
     align-items: center;
     padding-left: 20px;
@@ -40,14 +39,22 @@ header{
 
     
     nav{
+      display: none;
+      position: fixed;
+      top:70px;
+      width: 100%;
+
+      &.-active{
+        display: block;
+      }
+  
+      @include midTab{
+        position: static;
+        display: block;
+      }
 
         ul{
-          display: none;
-         
-          
-          @include midTab{
-            display: flex;
-         
+          display: flex;
 
           li{
   
@@ -68,7 +75,6 @@ header{
             }
           }
         }
-        }
 
       
     }
@@ -77,6 +83,7 @@ header{
     .btn{
       position: absolute;
       right: 80px;
+      
       @include midTab{
         right:20px;
       }
@@ -115,6 +122,7 @@ header{
   text-align: right;
   position: relative;
   z-index: 100;
+
   // background-color: #FFFFFF;
   // position: absolute;
   // left: 0;
@@ -202,23 +210,3 @@ header{
     }
   }
 }
-
-#modal.hidden{
-    display: none;
-}
-
-#mask.hidden{
-  display: none;
-}
-
-
-  #mask{
-    background-color: #707070;
-    opacity: 0.3;
-    position: fixed;
-    top: 0;
-    left: 0;
-    right: 0;
-    bottom:0;
-    // z-index: -100;
-  }

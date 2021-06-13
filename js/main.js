@@ -86,8 +86,8 @@ AOS.init({
 // ナビボタン
 $(function(){
   $('.nav-btn').on('click',function(){
-      $(this).toggleClass("-active");
-      // $('#nav').toggleClass("-active");
+      $('.nav-btn').toggleClass("-active");
+      $('.nav').toggleClass("-active");
   })
 });
 

@@ -1,3 +1,5 @@
+@import './general';
+
 #access{
   background: url("./image/bg.png");
   text-align: center;
@@ -6,7 +8,12 @@
 
 
     .title{
-      padding-bottom:85px;
+      padding-bottom:40px;
+
+      @include smallTab{
+        padding-bottom:85px;
+
+      }
       .logo{
   
         img{
@@ -15,7 +22,12 @@
       }
   
       h2{
-        font-size:36px;
+        font-size:24px;
+
+        @include smallTab {
+          font-size:36px;
+        }
+       
       }
     }
 

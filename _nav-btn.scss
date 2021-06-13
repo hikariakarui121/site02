@@ -1,0 +1,68 @@
+@import "../fundation/general";
+
+button.nav-btn{
+  width:35px;
+  height:30px;
+  position: relative;
+
+  // 存在を消す
+  appearance: none;
+  outline: none;
+  font:inherit;
+  border: none;
+  background-color: transparent;
+
+  @include midTab{
+    display: none;
+  }
+
+
+  // JS作動時
+  &.-active{
+
+    span{
+      top:0;
+      bottom: 0;
+      margin: auto;
+      transition: 0.3s ease;
+
+      &:first-child{
+       transform: rotate(45deg);
+      }
+      &:nth-child(2){
+        transform: rotate(45deg);
+      }
+      &:last-child{
+        transform: rotate(-45deg);
+      }
+    }
+
+  }
+
+  span{
+    display: block;
+    background-color: #000;
+    height:  2px;
+    width: 100%;
+    position:absolute;
+
+    &.span{
+      background-color:#FFFFFF ;
+    }
+    
+
+
+    &:first-child{
+      top:0;
+    }
+    &:nth-child(2){
+      top:0;
+      bottom: 0;
+      margin: auto;
+    }
+    &:last-child{
+      bottom:0;
+    }
+
+  }
+}

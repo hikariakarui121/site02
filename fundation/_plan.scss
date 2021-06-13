@@ -1,10 +1,16 @@
+@import './general';
+
 #plan{
   text-align: center;
   background: url("./image/bg02.png");
-  padding-bottom: 138px;
+  padding-bottom: 10px;
   padding-top: 60px;
   padding-right: 20px;
   padding-left: 20px;
+
+  @include smallTab{
+    padding-bottom: 138px;
+  }
 
   .title{
     padding-bottom:65px;
@@ -17,7 +23,12 @@
     }
 
     h2{
-      font-size:36px;
+      
+      font-size: 24px;
+      @include smallTab{
+        font-size:36px;
+      }
+
     }
 
   }
