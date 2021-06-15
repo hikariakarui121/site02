@@ -1,0 +1,84 @@
+#f-nav{
+  background: url("./image/bg3.png");
+
+  nav{
+    padding-top: 64px;
+    padding-bottom:96px;
+    ul{
+      display: flex;
+      justify-content: center;
+      flex-direction: row-reverse;
+
+      li{
+        writing-mode: vertical-rl;
+
+        & +li{
+          padding-right:34px;
+          
+        }
+       
+
+        a{
+          font-size: 18px;
+          display: block;
+          color:#000000;
+
+        }
+
+
+      }
+    }
+  }
+
+  .f-logo{
+    text-align: center;
+    padding-bottom: 72px;
+    img{
+
+    }
+  }
+
+  .f-info{
+    text-align: center;
+    padding-bottom:60px;
+ 
+
+    .f-address{
+      display: flex;
+      justify-content: center;
+      padding-bottom: 23px;
+      p{
+        font-size: 16px;
+
+        & +p{
+          padding-left:20px;
+        }
+      }
+    }
+    .f-tell{
+
+      display: flex;
+      justify-content: center;
+
+      p{
+        font-size:16px;
+
+        & + p{
+          padding-left:20px;
+        }
+      }
+    }
+  }
+}
+
+
+#last{
+  background-color: #000000;
+  color:white;
+  text-align: center;
+
+  p{
+    font-size: 12px;
+    padding:23px 0;
+  }
+}

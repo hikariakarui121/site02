@@ -1,0 +1,94 @@
+@import './general';
+
+#contents{
+  background:url("./image/bg3.png");
+  background-size: cover;
+
+  .inner{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    padding-top:50px;
+    padding-bottom: 50px;
+
+    @include smallTab{
+      flex-direction: row-reverse;
+      justify-content: center;
+      padding-top:90px;
+      padding-bottom: 50px;
+     
+    }
+    
+    @include OverTab{
+      padding-top: 150px;
+      padding-bottom: 75px;
+    }
+
+    h2{
+      
+      line-height: 44px;
+      text-align: center;
+      padding-bottom: 30px;
+      font-size: 24px;
+      
+
+      @include smallTab{
+        writing-mode: vertical-rl;
+        text-indent: -2em;
+        text-align: inherit;
+        padding-left:45px;
+        padding-bottom: 0px;
+        font-size: 28px;
+      }
+
+      @include OverTab{
+        padding-left:90px;
+
+      }
+
+    }
+  
+  
+  
+    .contents-item{
+      display: flex;
+      flex-direction: column;
+
+      @include smallTab{
+        flex-direction: row-reverse;
+        justify-content: center;
+        align-items: flex-start;
+      }
+      
+      
+      p{
+        font-size: 16px;
+        line-height: 38px;
+        text-align: center;
+        padding-bottom: 20px;
+        
+        @include smallTab{
+          writing-mode: vertical-rl;
+          text-orientation: upright;
+          text-align: inherit;
+          padding-left:45px;
+          padding-bottom: 0px;
+        }
+        
+        @include OverTab{
+          padding-left: 100px;
+  
+        }
+        
+            &.author{
+              padding-left: 0;
+              align-items: bottom;
+            }
+  
+      }
+    }
+
+  }
+
+
+}

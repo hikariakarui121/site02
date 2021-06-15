@@ -1,0 +1,80 @@
+@import './general';
+
+#plan{
+  text-align: center;
+  background: url("./image/bg02.png");
+  padding-bottom: 10px;
+  padding-top: 60px;
+  padding-right: 20px;
+  padding-left: 20px;
+
+  @include smallTab{
+    padding-bottom: 138px;
+  }
+
+  .title{
+    padding-bottom:65px;
+
+    .logo{
+
+      img{
+        padding-bottom: 20px;
+      }
+    }
+
+    h2{
+      
+      font-size: 24px;
+      @include smallTab{
+        font-size:36px;
+      }
+
+    }
+
+  }
+
+  .p-inner{
+    display: flex;
+    justify-content: center;
+    align-items: flex-start;
+    flex-wrap: wrap;
+
+    .p-contents{
+      display: flex;
+      flex-direction: column-reverse;
+      width: 331px;
+      padding-bottom: 50px;
+      
+      &+.p-contents{
+        padding-left:0;
+
+        @include smallTab{
+          padding-left:5%;
+        }
+     
+      }
+
+      .p-item{
+        padding-top: 26px;
+       text-align: left;
+
+        h3{
+          font-size: 20px;
+          line-height: 32px;
+          padding-bottom: 24px;
+        }
+        .discription{
+          font-size: 16px;
+          line-height: 32px;
+        }
+
+      }
+
+      img{
+        width:100%;
+      }
+
+  }
+    }
+
+}
