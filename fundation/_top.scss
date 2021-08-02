@@ -14,6 +14,7 @@ height: 100%;
   img{
     width: 100%;
     height: auto;
+    min-height: 280px;
   }
 
   
@@ -33,10 +34,12 @@ height: 100%;
     @include smallTab{
       font-size: 25px;
       writing-mode: vertical-rl;
+
       line-height: 85px;
       top: 33%;
       right: 25%;
       transform: none;
+
     }
 
     @include midTab{

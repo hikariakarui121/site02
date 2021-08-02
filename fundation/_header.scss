@@ -51,6 +51,7 @@ header{
       @include midTab{
         position: static;
         display: block;
+
       }
 
         ul{
@@ -101,6 +102,10 @@ header{
         height:32px;
         width:100px;
         line-height: 32px;
+
+        &:hover{
+          opacity: 0.7;
+        }
         
         @include midTab{
           height:46px;

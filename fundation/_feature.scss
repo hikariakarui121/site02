@@ -1,21 +1,30 @@
 @import './general';
 #feature{
-  padding-bottom:78px ;
+  padding:0px 20px 78px 20px;
+  max-width: 1500px;
+  width: 100%;
+  margin: 0 auto;
+  box-sizing: border-box;
 
   .feature-item{
-    padding-top: 105px;
+    padding-top: 60px;
+    display: flex;
+    flex-direction: column-reverse;
 
     @include OverTab{
-      display: flex;
       flex-direction: row-reverse;
       justify-content: flex-end;
       align-items: center;
+      padding-top: 105px;
     }
 
-
-
     &:nth-child(even){
-      flex-direction: row;
+
+
+      @include OverTab{
+        flex-direction: row;
+      }
+     
       // justify-content: flex-start;
     }
 
@@ -27,6 +36,7 @@
       @include OverTab{
       padding-top: 22px;
       text-align: left;
+     
       }
 
       &.second{
@@ -39,13 +49,17 @@
       }
 
       h2{
-       
         font-size:24px;
         line-height: 62px;
-        padding-bottom: 75px;
+        padding-bottom: 30px;
 
         @include smallTab{
+          font-size: 28px;
+          
+        }
+        @include ssOverTab{
           font-size: 36px;
+          padding-bottom: 75px;
         }
         
 
@@ -54,7 +68,11 @@
       p{
         font-size:16px;
         line-height: 32px;
-        padding-bottom: 75px;
+        padding-bottom: 30px;
+
+        @include OverTab{
+          padding-bottom: 75px;
+        }
       }
 
       .detail-btn{
@@ -72,13 +90,23 @@
 
     .image{
       text-align: center;
-
+      padding-bottom: 10px;
+      
       @include OverTab{
-      padding-right: 135px;
+      padding-right: 80px;
+      padding-bottom: 0px;
+      
+      @include ssOverTab{
+        padding-right: 135px;
+      }
 
       &.second{
         padding-right: 0px;
-        padding-left: 135px;
+        padding-left: 80px;
+
+        @include ssOverTab{
+          padding-right: 135px;
+        }
       }
 
     }
