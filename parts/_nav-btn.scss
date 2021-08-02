@@ -2,9 +2,6 @@
 
 button.nav-btn{
   width:35px;
-  height:30px;
-  position: relative;
-
   // 存在を消す
   appearance: none;
   outline: none;
@@ -16,53 +13,45 @@ button.nav-btn{
     display: none;
   }
 
-
-  // JS作動時
-  &.-active{
-
-    span{
-      top:0;
-      bottom: 0;
-      margin: auto;
-      transition: 0.3s ease;
-
-      &:first-child{
-       transform: rotate(45deg);
-      }
-      &:nth-child(2){
-        transform: rotate(45deg);
-      }
-      &:last-child{
-        transform: rotate(-45deg);
-      }
-    }
-
-  }
-
   span{
     display: block;
     background-color: #000;
-    height:  2px;
+    height: 2px;
     width: 100%;
-    position:absolute;
+    margin-bottom: 9px;
+    transition: transform 0.5s ease;
 
     &.span{
       background-color:#FFFFFF ;
     }
-    
 
-
-    &:first-child{
-      top:0;
-    }
-    &:nth-child(2){
-      top:0;
-      bottom: 0;
-      margin: auto;
-    }
     &:last-child{
-      bottom:0;
+      margin-bottom: 0px;
+      // transform: rotate(0deg);
     }
 
   }
+
+
+  // JS作動時
+  &.-active{
+
+    &>span{
+      display: block;
+      transition: transform 0.5s ease;
+  
+      &:nth-child(1){
+       transform:translateY(11px) rotate(45deg);
+      }
+      &:nth-child(2){
+        transform: translateX(-18px) scale(0);
+      }
+      &:nth-child(3){
+        transform:translateY(-11px) rotate(-45deg);
+      }
+    }
+
+  }
+
+  
 }

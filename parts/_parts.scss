@@ -68,6 +68,8 @@ main{
       font-size: 16px;
       line-height: 32px;
       padding-bottom:78px;
+
+   
       }
 
 
@@ -118,21 +120,20 @@ main{
       h3{
         font-size:24px;
         padding-top: 60px;
-        padding-bottom: 52px;
+        padding-bottom: 0px;
       }
       
       p{
         font-size:16px;
         line-height: 32px;
+        padding-top:52px;
 
         &.hot-p{
-          padding-top:52px;
           padding-bottom: 112px;
-
         }
 
         &+p{
-          padding-top:52px;
+          padding-top:0px;
           padding-bottom: 112px;
           font-size: 14px;
           
@@ -147,11 +148,11 @@ main{
       // flex: 1;
       img{
         width: 80%;
-
+        height: auto;
 
         @include OverTab{
-            width:400px;
-            height:230px;
+            width:450px;
+            height:258px;
           }
 
       @include sOverTab{
@@ -182,7 +183,7 @@ main{
   
     dl{
       font-size:15px;
-      line-height: 32px;
+      line-height: 1.75em;
       max-width: 880px;
       margin: 0 auto;
     
@@ -190,18 +191,34 @@ main{
        display: flex;
        justify-content: flex-start;
        border-top:1px solid #E7E7E7;
-       border-bottom: 1px solid #E7E7E7 ;
+       align-items: center;
+       min-height: 60px;
+
+       &:last-child{
+          border-bottom: 1px solid #E7E7E7 ;
+       }
+    
  
        dt{
-         width: 220px;
+         font-size: 14px;
          text-align: left;
          box-sizing: border-box;
          padding-left: 10px;
+         width: 140px;
+
+         @include smallTab{
+          width: 220px;
+         }
   
        }
        dd{
         text-align: left;
         flex:1;
+        font-size: 12px;
+
+        @include smallTab{
+          font-size: 14px;
+        }
        }
      }
     }

@@ -35,6 +35,7 @@ header{
         margin-right:120px;
         line-height: 80px;
         width: 150px;
+       
 
         @include midTab{
           width: 201px;
@@ -45,21 +46,27 @@ header{
 
     
     nav{
-      display: none;
       position: fixed;
       top:80px;
       left:0;
       width: 100%;
       background-color: rgba($color: #fff, $alpha: 0.9);
       padding-left: 20px;
+      transform:  translateY(-50px) ;
+      visibility: hidden;
+      transition: transform .3s ease;
 
       &.-active{
         display: block;
+        transition: transform .3s ease;
+        transform:none;
+        visibility: visible;
       }
   
       @include midTab{
         position: static;
         display: block;
+        transform: none;
       }
 
         ul{       
